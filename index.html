@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/test.css">
+
+    <title>Directorio</title>
+</head> 
+
+<body>
+    <script>
+        const elementos = [
+            {
+                nombre: 'Rafael Acosta Arzaga',
+                imagen: '1-Rafa.png',
+                dpto: 'Mantenimiento y mensajería',
+                correo: '',
+                titulos: [],
+                cedula: ''
+            },
+            {
+                nombre: 'M.A.C. Ramón Antonio Armendáriz Aguirre',
+                imagen: '2-Ramon.png',
+                dpto: 'Programas sociales',
+                correo: 'ramon.armendariz@implanchihuahua.org',
+                titulos: ['Maestro en Administración de la Construcción, por el Instituto Tecnológico de la Construcción.', 'Arquitecto, por el Instituto Superior de Ciencia y Tecnología de La Laguna.', 'Licenciado en Humanidades, por la Universidad Autónoma de Zacatecas.'],
+                cedulas: ['Cédula profesional 5131568', 'Cédula profesional 742673', 'Cédula profesional 2053424']
+            }, 
+            {
+                nombre: 'Arq. Isabel Castañeda Perea',
+                imagen: '3-Isabel.png',
+                dpto: 'Planes y programas',
+                correo: 'isabel.castaneda@implanchihuahua.org',
+                titulos: ['Arquitecto, por el Instituto Superior de Arquitectura y Diseño (ISAD)'],
+                cedulas: ['Cédula profesional en trámite']
+            },
+            {
+                nombre: 'Arq. Ana Gabriela Cervantes García',
+                imagen: '4-Gaby.png',
+                dpto: 'Planeación Integral ',
+                correo: 'isabel.castaneda@implanchihuahua.org',
+                titulos: ['Arquitecto, por el Instituto Superior de Arquitectura y Diseño (ISAD)'],
+                cedulas: ['Cédula profesional 11770560']
+            },
+            {
+                nombre: 'C. Juana Contreras Hinojosa',
+                imagen:'5-Juanis.png',
+                dpto: 'Intendencia',
+                correo: 'juana.contreras@implanchihuahua.org',
+                titulos: [''],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Ing. Samuel Cordero López',
+                imagen:'6-Samuel.png',
+                dpto: 'Analista de datos geoespaciales. Geomática',
+                correo: 'samuel.cordero@implanchihuahua.org',
+                titulos: ['Maestro en Agronegocios, por la Universidad Autónoma de Chihuahua (UACH)', 'Ingeniero en Ecología, por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: ['', 'Cédula profesional 7903772'],
+            },
+            {
+                nombre: 'Luis Carlos Cruz Castillo',
+                imagen:'7-Luis.png',
+                dpto: 'Sistemas',
+                correo: 'luis.cruz@implanchihuahua.org',
+                titulos: ['Ingeniería en Sistemas Computacionales (I.S.C.) por el Instituto Tecnológico de Chihuahua II'],
+                cedulas: ['Cédula profesional en trámite'],
+            },
+            {
+                nombre: 'Lic. Remigio Córdova Álvarez',
+                imagen:'8-Remi.png',
+                dpto: 'Normatividad y transparencia',
+                correo: 'remigio.cordova@implanchihuahua.org',
+                titulos: ['Perito en Grafoscopía y Documentoscopía, por el Colegio Integral Jurídico Pericial'],
+                cedulas: ['Cédula profesional 7051013'],
+            },
+            {
+                nombre: 'Tec. Diana Domínguez Vargas',
+                imagen:'9-Diana.png',
+                dpto: 'Auxiliar Administrativo. Administración',
+                correo: 'diana.dominguez@implanchihuahua.org',
+                titulos: ['Técnico, por el Colegio Nacional de Educación Profesional Técnica (CONALEP)'],
+                cedulas: ['Cédula profesional 7903772'],
+            },
+            {
+                nombre: 'Lic. Tania Edith Escobedo Mingura',
+                imagen:'10-Tania.png',
+                dpto: 'Vinculación y Difusión',
+                correo: 'tania.escobedo@implanchihuahua.org',
+                titulos: ['Licenciada en Ciencias de la Información, por la Universidad Autónoma de Chihuahua'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Javier Eduardo Estrada Lechuga',
+                imagen:'11-Javier.png',
+                dpto: '',
+                correo: '',
+                titulos: [''],
+                cedulas: [''],
+            },
+            {
+                nombre: 'IDT Alberto Fierro Reynoso',
+                imagen:'12-Beto.png',
+                dpto: 'Analista Urbano. Planeación Integral',
+                correo: 'beto.fierro@implanchihuahua.org',
+                titulos: ['Ingeniero en Desarrollo Territorial (IDT), por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Lic. Guillermo Hernández Rodríguez',
+                imagen:'13-Guillermo.png',
+                dpto: 'Proyectos especiales',
+                correo: 'guillermo.hernandez@implanchihuahua.org',
+                titulos: ['Licenciado en Ciencias de la Información, por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Lic. Alberto Hernández Segura',
+                imagen:'14-Alberto.png',
+                dpto: 'Vinculación y Difusión',
+                correo: 'alberto.hernandez@implanchihuahua.org',
+                titulos: ['Licenciado en Diseño Gráfico Industrial por la Universidad de Durango'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Dr. Carlos R. Hernández Velasco',
+                imagen:'15-CarlosR.png',
+                dpto: 'Dirección',
+                correo: 'carlos.hernandez@implanchihuahua.org',
+                titulos: ['Doctor en Estudios Urbanos (PhD in Urban Studies)) por la Universidad de Glasgow en Escocia', 'Maestro en Arquitectura (M. Arch) por la Universidad McGill en Monteral, Canadá; Especializado en vivienda en países en desarrollo', 'Arquitecto, por la Universidad Autónoma de Aguascalientes, México'],
+                cedulas: ['', '', 'Cédula profesional 2283497']
+            },
+            {
+                nombre: 'L.S.C.A Martha Verónica Lugo Alarcón',
+                imagen: '16-Vero.png',
+                dpto: 'Coordinador Administrativa',
+                correo: 'veronica.lugo@implanchihuahua.org',
+                titulos: ['Licenciada en Sistemas de Computación Administrativa, por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Joel Arturo López Quintana',
+                imagen:'17-Joel.png',
+                dpto: 'Geomática',
+                correo: 'joel.lopez@implanchihuahua.org',
+                titulos: ['Ingeniero en Desarrollo Territorial (IDT), por la Universidad Autónoma de Chihuahua'],
+                cedulas: ['Cédula profesional en trámite'],
+            },
+            {
+                nombre: 'C. Gloria López Muñoz',
+                imagen: '18-Gloria.png',
+                dpto: 'Recepción',
+                correo: 'gloria.lopez@implanchihuahua.org',
+                titulos: [''],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Arq. María Artemisa Macías Herrera',
+                imagen: '19-Micha.png',
+                dpto: 'Analista de datos geoespaciales. Geomática',
+                correo: 'artemisa.macias@implanchihuahua.org',
+                titulos: ['Arquitecta, por el Instituto Tecnológico de Chihuahua II con especialidad en Arquitectura Regional Sustentable'],
+                cedulas: ['Cédula profesional 10209969'],
+            },
+            {
+                nombre: 'M.I.C. RocÍo Guadalupe Martínez Bibiano',
+                imagen:'20-Rocio.png',
+                dpto: 'Sistemas',
+                correo: 'rocio.martinez@implanchihuahua.org',
+                titulos: ['Maestra en Dirección e Ingeniería de Sitios Web, por la Universidad Internacional de La Rioja en España','Maestra en Ingeniería en Computación (M.I.C.) por la Universidad Autónoma de Chihuahua (UACH)', 'Ingeniería en Sistemas Computacionales (I.S.C.) por el Instituto Tecnológico de Chihuahua II'],
+                cedulas: ['', 'Cédula profesional 9816225', 'Cédula profesional 3958321'],
+            },
+            {
+                nombre: 'I.S.C. Carlos Alberto Martínez mar',
+                imagen: '21-Charlie.png',
+                dpto: 'Coordinador. Geomática',
+                correo: 'carlos.matinez@implanchihuahua.org',
+                titulos: ['Máster a título propio en Sistemas de Información Geográfica con ArcGIS, por la Universidad Católica de San Antonio (UCAM)', 'Ingeniería en Sistemas Computacionales (ISC), por el Instituto Tecnológico de Chihuahua II'],
+                cedulas: ['', 'Cédula profesional 4232560'],
+            },
+            {
+                nombre: 'Lic. Leoncio Elmer Ornelas Olivas',
+                imagen: '22-Elmer.png',
+                dpto: 'Analista de datos geoespaciales. Geomática',
+                correo: 'elmer.ornelas@implanchihuahua.org',
+                titulos: ['Lic. en Geoinformática, por la Universidad Autónoma de Ciudad Juárez (UACJ)'],
+                cedulas: ['Cédula profesional 8383939'],
+            },
+            {
+                nombre: 'José Antonio',
+                imagen: '23-Jantonio.png',
+                dpto: '',
+                correo: '',
+                titulos: [''],
+                cedulas: [''],
+            },
+            {
+                nombre: 'I.D.T. Jemima Abigail Plascencia Quezada',
+                imagen:'24-Jemi.png',
+                dpto: 'Analista de datos geoespaciales. Geomática',
+                correo: 'jemima.plascencia@implanchihuahua.org',
+                titulos: ['Ingeniero en Desarrollo Territorial (IDT), por la Universidad Autónoma de Chihuahua UACH'],
+                cedulas: ['Cédula profesional 9844636'],
+            },
+            {
+                nombre: 'M.P.D.U. Alma Denisse Quintana Chávez',
+                imagen: '25-Denisse.png',
+                dpto: 'Analista Urbano. Planeación Integral',
+                correo: 'denisse.quintana@implanchihuahua.org',
+                titulos: ['Maestría en Planificación y Desarrollo Urbano (MPDU), por la Universidad Autónoma de Ciudad Juárez (UACJ)', 'Arquitecta, por el Instituto Superior de Arquitectura y Diseño (ISAD)'],
+                cedulas: ['', 'Cédula profesional 7217615'],
+            },
+            {
+                nombre: 'C.P. Martha Gricel Robles Hernández',
+                imagen: '26-Gris.png',
+                dpto: 'Recursos Humanos y Materiales',
+                correo: 'gricel.robles@implanchihuahua.org',
+                titulos: ['Contador Público, por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Lic. Raúl Antonio Sifuentes Torres',
+                imagen: '27-Raul.png',
+                dpto: 'Coordinador. Normatividad y Transparencia',
+                correo: 'raul.sifuentes@implanchihuahua.org',
+                titulos: ['Licenciado en Derecho, por la Universidad Autónoma de Chihuahua (UACH)'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Tec. Mayra Yarlet Trejo Cervantes',
+                imagen: '28-Mayra.png',
+                dpto: 'Auxiliar administrativo. Administración',
+                correo: 'mayra.trejo@implanchihuahua.org',
+                titulos: ['Técnico, por el Colegio Nacional de Educación Profesional Técnica (CONALEP)'],
+                cedulas: ['Cédula profesional 7529996'],
+            },
+            {
+                nombre: 'Arq. Jessica Elizabeth Urquidi Gallegos',
+                imagen: '29-Eli.png',
+                dpto: 'Analista Urbano. Planeación Integral',
+                correo: 'jessica.urquidi@implanchihuahua.org',
+                titulos: ['Arquitecta, por el Instituto Tecnológico de Chihuahua II'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Miguel Ángel Valdez Rodarte',
+                imagen:'30-Mike.png',
+                dpto: 'Sistemas',
+                correo: 'miguel.valdez@implanchihuahua.org',
+                titulos: ['Ingeniería en Sistemas Computacionales (I.S.C.) por el Instituto Tecnológico de Chihuahua II'],
+                cedulas: ['Cédula profesional en trámite'],
+            },
+            {
+                nombre: 'Humberto Velderrain Armendariz',
+                imagen: '31-Humberto.png',
+                dpto: 'Planes y programas',
+                correo: 'humberto.velderrain@implanchihuahua.org',
+                titulos: ['Ingeniero en Ecología, por la Universidad Autónoma de Chihuahua'],
+                cedulas: [''],
+            },
+            {
+                nombre: 'Lic. Alejandro Villa Leyva',
+                imagen: '32-Alex.png',
+                dpto: 'Normatividad y Transparencia',
+                correo: 'alejandro.villa@implanchihuahua.org',
+                titulos: ['Licenciado en Derecho, por la Universidad de Estudios Avanzados (UNEA)'],
+                cedulas: [''],
+            }
+        ]
+
+        function findTitulos (titulos, cedulas) {
+            let html = '';
+            for (let i = 0; i < titulos.length; i++) {
+               html += `<ul><em>${titulos[i]}</em><br/>${cedulas[i]}</ul>`;
+            }
+            return html;
+        }
+
+        function findCorreo (correo, imagen, nombres) {
+            let html = ''
+            let nombre = nombres.trim().split(/\s+/)
+            if (correo.length != 0) {
+                html = 
+                    '<a href="mailto: ' + correo + '" class="contacto">' +
+                        '<img title="Da clic para ponerte en contacto con ' + nombre[1] + ' " src="../imgs/Imagenes-Elementos/'+ imagen +'" alt=""/>'+
+                    '</a>'
+            }else {
+                html = 
+                    '<img src="../imgs/Imagenes-Elementos/'+ imagen +'" alt=""/>'
+            }
+            return html;
+        }
+    </script>
+
+    <div class="portada">
+        <img src="./imgs/portada/DIRECCION.png"/>
+    </div>
+    <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+            <script>
+                for(i=0; i<elementos.length; i++){
+                    document.write(
+                            '<div class="card d-flex position-relative flex-column .col-1 .col-sm-6 col-md-6 col-lg-6 col-xl-4 border-light">' +
+                                    '<div class="imgContainer d-flex flex-column">' +
+                                        '<div>' +
+                                             findCorreo(elementos[i].correo, elementos[i].imagen, elementos[i].nombre) + 
+                                        '</div>' +
+                                        '<div class="info-empleado">' +
+                                            '<p><b>' + elementos[i].nombre + '</b></p>' +
+                                            '<p>' + elementos[i].dpto + '</p>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '<div class="content">' +
+                                    '<p>' + findTitulos(elementos[i].titulos, elementos[i].cedulas, elementos[i].nombre) + '</p>' +
+                                '</div>' +
+                            '</div>' 
+                    )
+                }   
+            </script>
+    </div>
+</body>
+</html>
